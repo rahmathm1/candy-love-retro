@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-md-5">
+    
+  <h3>Team Members ({{ members.length }})</h3>
+  <form>
+    <div class="form-group">
+        <div class="row">
+          <div class="col-8">
+            <div class="input-group">
+                    <input type="text" class="form-control" name="member" placeholder="Enter Name" [(ngModel)]="member">
+
+                    <span class="input-group-btn">
+                      <button class="btn btn-success" type="button" (click)="add()">Add</button>
+                    </span>
+            </div>
+          </div>
+          <div class="col-4">
+            <button class="btn btn-warning form-control" (click)="shuffle()">Shuffle the list</button>
+          </div>
+        </div>
+    </div>
+    </form>
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let member of members">{{ member.name }}
+        <button class="btn btn-danger btn-sm" (click)="remove(member.name)">Remove</button>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center" *ngIf="!members.length">No members
+      </li>
+    </ul>
+</div>

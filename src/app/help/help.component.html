@@ -1,0 +1,21 @@
+
+
+<h3>Running the activity:</h3>
+<p>
+  Candy love is a great team building activity that gets the participants talking about their life beyond the work activities
+</p>
+<ol>
+  <li>Place a package of M&Ms, Skittles or another colorful candy in a jar</li>
+  <li>Ask a  participant to pick a candy from the jar, and then share something about him/herself according to the candy color:
+
+    <p *ngFor="let topic of topics" >
+      <span [ngStyle]=" {color:topic.color}">{{ topic.color.toUpperCase() }}</span> – {{ topic.description }}
+    </p>
+
+  </li>
+  <li>Pass the jar to the next participant and go back to step 2</li>
+  <li>Stop when the candies or the time is over</li>
+</ol>
+
+<p>All data are stored in local storage of your browser. So it will persist until you manually remove.</p>
+
