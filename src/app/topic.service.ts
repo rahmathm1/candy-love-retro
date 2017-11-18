@@ -59,7 +59,7 @@ export class TopicService {
   }
 
   save(topics: Topic[]): Topic[] {
-    localStorage.setItem(this.KEY, JSON.stringify(this.topics))
+    localStorage.setItem(this.KEY, JSON.stringify(topics))
     return topics;
   }
 
